@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/jogo-da-velha/static/js/main.fc93c7d3.js",
+    "index.html": "/jogo-da-velha/index.html",
+    "main.fc93c7d3.js.map": "/jogo-da-velha/static/js/main.fc93c7d3.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.fc93c7d3.js"
+  ]
+}
