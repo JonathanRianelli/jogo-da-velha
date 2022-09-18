@@ -24,12 +24,23 @@ function App() {
     color: ${props => props.jogando === false ? '#06DF2F' : ''};
     text-align: center;
     margin: 50px 0;
-    @media (max-width: 630px) {
-      font-size: 36px;
+    @media (max-width: 1110px) {
+      font-size: 50px;
+      margin: 30px 0 ;
+    }
+
+    @media (max-width: 715px) {
+      font-size: 40px;
     }
   `
   const Placar = styled.section `
     color: white;
+
+    @media (max-width: 1110px) {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
   `
 
   const J1 = styled.div `
@@ -37,6 +48,10 @@ function App() {
     text-align: center;
     top: 30vh;
     left: 80px;
+
+    @media (max-width: 1110px) {
+      position: initial;
+    }
   `
   const J2 = styled(J1) `
     left: inherit;
@@ -46,11 +61,29 @@ function App() {
   const PlacarNome = styled.p `
     font-size: 40px;
     margin-bottom: 60px;
+
+    @media (max-width: 1110px) {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 715px) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   `
 
   const PlacarPt = styled.span `
     font-size: 100px;
     text-align: center;
+
+    @media (max-width: 1110px) {
+      font-size: 60px;
+    }
+
+    @media (max-width: 715px) {
+      font-size: 40px;
+    }
   `
 
   const Tabuleiro = styled.div`
@@ -58,6 +91,11 @@ function App() {
     justify-content: center;
     grid-template-columns: repeat(3, 115px);
     grid-template-rows: repeat(3, 115px);
+
+    @media (max-width: 1110px) {
+      grid-template-columns: repeat(3, 95px);
+    grid-template-rows: repeat(3, 95px);
+    }
   `
 
   const Casa = styled.div<{n: string, simb: string}> `
@@ -69,6 +107,10 @@ function App() {
     cursor: pointer;
     border-top: ${props => props.n === '3' || props.n === '4' || props.n === '5' || props.n === '6' || props.n === '7' || props.n === '8' ? '3px solid #BBBBBB' : 'none'};
     border-right: ${props => props.n === '0' || props.n === '3' || props.n === '6' || props.n === '1' || props.n === '4' || props.n === '7' ? '3px solid #BBBBBB' : 'none'};
+
+    @media (max-width: 1110px) {
+      font-size: 60px;
+    }
   `
 
   const Botoes = styled.div `
@@ -85,6 +127,16 @@ function App() {
     font-size: 20px;
     padding: 10px;
     margin: 45px 20px 0;
+
+    @media (max-width: 1110px) {
+      font-size: 17px;
+      padding: 8px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 715px) {
+      margin-top: 15vh;
+    }
   `
 
   const [jogInicial, setJogInicial] = useState('X')
@@ -133,10 +185,6 @@ function App() {
         setPlacar([addJ1, placar[1]])
         setJogando(false)
       }
-      // else if (jogo.every(item => item !== '')) {
-      //   setTitulo('Empate')
-      //   setJogando(false)
-      // }
     })
   }
 
