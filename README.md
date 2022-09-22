@@ -4,7 +4,7 @@
 
 ## Descrição
 
-<p>Jogo da velha, feito em React com Typescript e styled-components</p>
+<p>Jogo da velha com placar, feito em React com Typescript e styled-components</p>
 
 
 ## Tecnologias Usadas
